@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>为什么要清除浮动</title>
+    <style>
+        /* ⚠️⚠️⚠️ 注意，父盒子没有height高度，所以需要设置清除浮动 */
+        .box {
+            /* 清除浮动：2.父级添加overflow */
+            /* overflow: hidden; */
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+
+        /* 清除浮动：3.:after伪元素法 */
+        /* .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        } */
+
+        /* IE6、7专有 */
+        /* .clearfix {
+            *zoom: 1;
+        } */
+
+        /* 清除浮动：4.双伪元素清除浮动[小米、腾讯] */
+        .clearfix::before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+
+        .damao {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .ermao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: cyan;
+        }
+
+        /* 清除浮动：1.额外标签法 */
+        /* .clear {
+            clear: both;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div class="box clearfix">
+        <div class="damao">1</div>
+        <div class="ermao">2</div>
+        <!-- 清除浮动：1.额外标签法 
+        <div class="clear"></div> -->
+    </div>
+    <div class="footer">footer</div>
+</body>
+
+</html>
