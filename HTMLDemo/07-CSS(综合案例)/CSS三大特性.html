@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS三大特性</title>
+    <style>
+        /* 1.层叠性 */
+        /* div {
+            color: red;
+            font-size: 12px;
+        }
+
+        div {
+            color: pink;
+        } */
+
+        /* 2.继承性 */
+        /* div {
+            color: pink;
+            font-size: 14px;
+        } */
+        /* body {
+            color: pink;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        div {
+            font-size: 14px;
+        } */
+
+        /* 3.优先级 */
+        /* div {
+            color: pink !important;
+        }
+
+        .test {
+            color: red;
+        } */
+        /* ul + li 的权重是2 */
+        ul li {
+            color: green;
+        }
+
+        /* li的权重是1， */
+        li {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li>久旱逢甘雨</li>
+        <li>他乡遇故知</li>
+        <li>洞房花烛夜</li>
+        <li>金榜题名时</li>
+    </ul>
+
+
+    <!-- <div class="test">你笑起来真好看</div> -->
+    <!-- <div>粉红色色的回忆</div>
+    <p>粉红色的回忆P</p> -->
+    <!-- <div>
+        <p>龙生龙，凤生凤，老鼠生来会打洞</p>
+    </div> -->
+    <!-- <div>长江后浪推前浪，前浪死在沙滩上</div> -->
+
+</body>
+
+</html>
