@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见网页布局技巧-CSS三角妙用</title>
+    <style>
+        .box1 {
+            width: 0;
+            height: 0;
+            /* 三个三角形 */
+            /* border-top: 100px solid pink;
+            border-right: 50px solid skyblue;
+            border-bottom: 0px solid blue;
+            border-left: 50px solid green; */
+
+            /* 上下两个三角形 */
+            /* border-top: 100px solid pink;
+            border-right: 50px solid skyblue;
+            border-bottom: 0px solid blue;
+            border-left: 0px solid green; */
+
+            /* 一个三角形 */
+            /* 上边框宽度调大 */
+            /* border-top: 100px solid transparent;
+            border-right: 50px solid skyblue; */
+            /* 左边和下边边框宽度设置为0 */
+            /* border-bottom: 0px solid blue;
+            border-left: 0px solid green; */
+
+            /* 简写版本-京东写法 */
+            /* 1.只保留红色右边框 */
+            border-color: transparent red transparent transparent;
+            /* 2.央视都是solid */
+            border-style: solid;
+            /* 3.上边框宽度要大，右边框宽度稍小，其余边框为0 */
+            border-width: 100px 50px 0 0;
+        }
+
+        .price {
+            width: 160px;
+            height: 24px;
+            line-height: 24px;
+            border: 1px solid deeppink;
+            margin: 0 auto;
+        }
+
+        .discount-price {
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 100%;
+            background-color: red;
+            text-align: center;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .discount-price i {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            /* 1.只保留红色右边框 */
+            border-color: transparent #ffffff transparent transparent;
+            /* 2.央视都是solid */
+            border-style: solid;
+            /* 3.上边框宽度要大，右边框宽度稍小，其余边框为0 */
+            border-width: 24px 10px 0 0;
+        }
+
+        .original-price {
+            font-size: 12px;
+            color: gray;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="price">
+        <span class="discount-price">
+            ￥1650
+            <i></i>
+        </span>
+        <span class="original-price">￥5650</span>
+    </div>
+
+</body>
+
+</html>
