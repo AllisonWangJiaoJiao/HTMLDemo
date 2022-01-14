@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3新特性</title>
+    <style>
+        /* 1.属性选择器  */
+        input[value] {
+            color: pink;
+        }
+
+        /* 常用 */
+        input[type="text"] {
+            color: pink;
+        }
+
+        /* 把所有icon1--icon4所有div变成红色 */
+        /* 旧的写法 */
+        /* .icon1,
+        .icon2,
+        .icon3,
+        .icon4 {
+            background-color: pink;
+        } */
+        /* 新的写法 ^开头 $结尾 */
+        /* 选择首先是div，然后具有class属性并且属性值必须是icon开头的元素 */
+        div[class^=icon] {
+            color: red;
+        }
+
+        section[class$=date] {
+            color: blue;
+        }
+
+        /* 1.总结：类选择器和属性选择器，伪类选择器权重都是10 */
+
+        /* 2.结构伪类选择器 */
+        /* 要求:选择ul里面的第一个小li */
+        /* ul li:first-child {
+            background-color: pink;
+        } */
+
+        /* 2.1选择ul里面的最后一个li */
+        /* ul li:last-child {
+            background-color: pink;
+        } */
+
+        /* 2.2选择ul里面的第n个li */
+        /* n可以是数字，关键词和公式 (even偶数，odd奇数) */
+        /* ul li:nth-child(6) {
+            background-color: cyan;
+        } */
+
+        /* 2.3把所有偶数行变色 */
+        /* ul li:nth-child(even) {
+            background-color: gray;
+        }
+        ul li:nth-child(odd) {
+            background-color: pink;
+        } */
+
+        /* 2.4 nth-child(n) 从0开始，每次加1 往后计算 (不能是字母)
+        n=0 选择所有li*/
+        /* ol li:nth-child(n) {
+            background-color: pink;
+        } */
+        /* 2n= even  2n+1 =odd*/
+        /* ol li:nth-child(2n) {
+            background-color: pink;
+        } */
+        ol li:nth-child(2n+1) {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CSS3新增选择器 -->
+    <!-- 1.属性选择器 -->
+    <div>
+        <input type="text" value="请输入用户名">
+        <input type="text">
+    </div>
+
+    <div>
+        <input type="text" name="" id="">
+        <input type="password" name="" id="">
+    </div>
+
+    <div class="icon1">1</div>
+    <div class="icon2">2</div>
+    <div class="icon3">3</div>
+    <div class="icon4">4</div>
+    <div>我是打酱油的</div>
+
+    <section class="icon1-date">我是安其拉</section>
+    <section class="icon2-date">我是Baby</section>
+    <section class="icon1-icon">我是谁？？？</section>
+
+
+    <!-- 2.结构伪类选择器 -->
+
+    <ul>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ul>
+
+    <ol>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ol>
+
+    <!-- 3.伪元素选择器 -->
+</body>
+
+</html>

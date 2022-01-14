@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3新特性-伪元素清除浮动</title>
+    <style>
+        /* 清除浮动 */
+        .clearfix::after {
+            visibility: hidden;
+            clear: both;
+            display: block;
+            content: "";
+            height: 0
+        }
+
+        .clearfix {
+            *zoom: 1
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
