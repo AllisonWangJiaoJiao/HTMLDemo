@@ -35,7 +35,7 @@ button {
 }
 
 a {
-    color: #666;
+    color: #333;
     text-decoration: none
 }
 
@@ -45,7 +45,10 @@ a:hover {
 
 button,
 input {
-    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 去掉蓝色边框 */
+    border: 0;
+    outline: none;
 }
 
 body {
@@ -53,7 +56,7 @@ body {
     -webkit-font-smoothing: antialiased;
     background-color: #fff;
     font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
-    color: #666
+    color: #333
 }
 
 .hide,
