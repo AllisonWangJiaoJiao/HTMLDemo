@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>字体图标的使用</title>
+    <title>字体图标的引入</title>
     <style>
         /* 字体声明 */
         @font-face {
@@ -22,24 +22,43 @@
 
         span {
             font-family: 'icomoon';
-            font-size: 100px;
-            color: pink;
+
         }
 
-        span .last {
+        ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        /* .arrow-icon::after {
             font-family: 'icomoon';
-            font-size: 100px;
-            color: blue;
-            content: '\ea50';
+            content: '\e91e';
+            margin-left: 6px;
+        } */
+
+        ul .arrow-icon::after {
+            font-family: 'icomoon';
+            content: '\e91e';
+            margin-left: 6px;
         }
     </style>
 </head>
 
 <body>
+
     <span></span>
-    <span></span>
-    <span></span>
-    <span class="last"></span>
+
+    <ul class="arrow-ul">
+        <li>我的订单</li>
+        <li class="arrow-icon">我的品优购</li>
+        <li>品优购会员</li>
+        <li class="arrow-icon">企业采购</li>
+        <li>关注品优购</li>
+        <li class="arrow-icon">客户服务</li>
+        <li>网站导航</li>
+    </ul>
+
+
 </body>
 
 </html>
