@@ -182,8 +182,7 @@
 }
 
 .dropdown .dd {
-    /* 先开发底部footer 暂时隐藏侧边栏 */
-    display: none;
+    display: block;
     width: 210px;
     height: 465px;
     background-color: #c81623;

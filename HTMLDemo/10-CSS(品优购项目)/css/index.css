@@ -1,0 +1,222 @@
+.main {
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+.focus {
+    float: left;
+    width: 721px;
+    height: 455px;
+}
+
+.newsflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+
+.news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+
+.news_header {
+    height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+    line-height: 33px;
+    padding: 0 15px;
+}
+
+.news_header h5 {
+    float: left;
+    font-size: 14px;
+}
+
+.news_header .more {
+    float: right;
+}
+
+.news_header .more::after {
+    font-family: 'icomoon';
+    content: "\e920";
+}
+
+.news_body {
+    padding: 5px 15px 0;
+}
+
+.news_body ul li {
+    height: 24px;
+    line-height: 24px;
+    /* 文字省略号 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.lifeservice {
+    /* 隐藏超出部分 */
+    overflow: hidden;
+    height: 209px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+}
+
+.lifeservice ul {
+    width: 252px;
+}
+
+.lifeservice ul li {
+    position: relative;
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+.lifeservice ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    background: url(../images/icons.png) no-repeat -19px -15px; 
+    margin-top: 12px;
+}
+
+.lifeservice ul li img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+}
+
+.bargain {
+    margin-top: 5px;
+}
+
+
+/* 5. recom 推荐模块  */
+.recom {
+    height: 163px;
+    background-color: #ebebeb ;
+    margin-top: 12px;
+}
+
+.recom_header {
+    float: left;
+    height: 163px;
+    width: 205px;
+    background-color: #5c5251;
+    text-align: center;
+    padding-top: 30px;
+    box-sizing:border-box;
+}
+
+.recom_body {
+    float: left;
+}
+
+.recom_body ul li {
+    float: left;
+    position: relative;
+}
+
+.recom_body ul li img {
+    width: 248px;
+    height: 163px;
+}
+
+/* 选择前三个元素加竖线 */
+.recom_body ul li:nth-child(-n+3)::after {
+    /* font-family: 'icomoon'; */
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 1px;
+    height: 145px;
+    background-color: #dddddd;
+}
+
+/* 家用电器模块  */
+.box_header {
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+
+.box_header h3 {
+    float: left;
+    font-size: 18px;
+    color: #c81623;
+    font-weight: 400px;
+}
+
+.tab_list {
+    float: right;
+    line-height: 30px;
+}
+
+.tab_list ul li {
+    float: left;
+}
+
+.tab_list ul li a {
+    margin: 0 15px;
+}
+
+.floor .w {
+    margin-top: 30px;
+}
+
+.box_body {
+    height: 361px;
+}
+
+.table_list_item>div {
+    float: left;
+    height: 361px;
+}
+
+.column_210 {
+    width: 210px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.column_210 ul {
+    padding-left: 12px;
+}
+
+.column_210 ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    border-bottom: 1px solid #cccccc;
+    text-align: center;
+    line-height: 33px;
+    margin-right: 10px;
+}
+
+.column_329 {
+    width: 329px;
+}
+
+.column_220 {
+    width: 220px;
+    border-right: 1px solid #cccccc;
+}
+
+.column_218 {
+    width: 218px;
+}
+
+.border_bottom {
+    /* 一般情况下，a如果包含有宽度的盒子，a需要转换为块级元素 */
+    display: block;
+    border-bottom: 1px solid #cccccc;
+}
