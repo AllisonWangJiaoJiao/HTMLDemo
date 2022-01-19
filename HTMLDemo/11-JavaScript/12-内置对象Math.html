@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内置对象</title>
+    <script>
+        // Math数学对象，不是一个构造函数，所以不需要new来调用
+        console.log(Math.PI)//输出3.141592653589793
+        console.log(Math.max(1, 99, 3))//输出 99
+        console.log(Math.max());//输出-Infinity
+        // 绝对值方法
+        console.log(Math.abs(-1));//输出 -1
+        console.log(Math.abs('-1'));//输出 -1
+        console.log(Math.abs('pink'));//输出 NaN
+
+        // 三个取整方法
+        // floor向下取整
+        console.log(Math.floor(1.1));//输出1
+        console.log(Math.floor(1.9));//输出1
+        // ceil向上取整
+        console.log(Math.ceil(1.1));//输出2
+        console.log(Math.ceil(1.9));//输出2
+        // round四舍五入 .5特殊，往大了取
+        console.log(Math.round(1.1));//输出1
+        console.log(Math.round(1.9));//输出2
+        console.log(Math.round(-1.5));//输出-1
+
+        // 得到一个两数之间的随机整数，包括两个数在内
+        function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+        }
+        console.log(getRandomIntInclusive(1, 10));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
