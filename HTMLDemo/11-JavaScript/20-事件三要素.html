@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件三要素</title>
+</head>
+
+<body>
+
+    <!-- 
+        1.事件是由三部分组成：事件源，事件类型，事件处理程序
+        1.1 事件源：事件触发的对象；
+        1.2 事件类型：如何触发？什么事件？如:鼠标点击，鼠标经过，鼠标按下；
+        1.3 事件处理程序 通过一个函数赋值的方式完成
+     -->
+
+    <!-- 栗子01 -->
+    <button id="button"> 唐伯虎 </button>
+    <!-- 栗子02 -->
+    <div>123</div>
+    <script>
+        // 栗子01
+        var btn = document.getElementById('button');
+        btn.onclick = function () {
+            alert('点秋香');
+        }
+        // 栗子02
+        // 1.获取事件源
+        var div = document.querySelector('div');
+        // 2.绑定事件 注册事件 
+        // div.onclick 
+        // 3.添加事件处理程序
+        div.onclick = function () {
+            console.log('选中div 123');
+        }
+
+    </script>
+
+</body>
+
+</html>
