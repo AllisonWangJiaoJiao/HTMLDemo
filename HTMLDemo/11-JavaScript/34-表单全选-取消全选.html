@@ -75,6 +75,7 @@
                 for (var j = 0; j < j_tbs.length; j++) {
                     if (!j_tbs[j].checked) {
                         flag = false;
+                        break;//退出for循环
                     }
                 }
                 j_cbAll.checked = flag;
