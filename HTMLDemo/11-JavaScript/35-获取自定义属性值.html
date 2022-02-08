@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取自定义属性值</title>
+</head>
+
+<body>
+
+    <div id="demo" customIndex='1' class="nav"></div>
+
+    <script>
+        var div = document.querySelector('div');
+        // 1.获取元素的属性值
+        // (1) element.属性
+        console.log(div.id);
+        // (2) element.getAttribute('属性') [推荐]
+        console.log(div.getAttribute('id'));
+        console.log(div.getAttribute('customIndex'));
+        // 小结: getAttribute 获取自定义属性
+
+        // 2.获取元素属性值
+        // (1) element.属性 = ‘值’
+        div.id = 'test';
+        div.className = 'navclass'
+        console.log(div.id);
+        // (2) element.customIndex('属性','值') 主要针对自定义属性
+        div.setAttribute('customIndex', 2);
+        console.log(div.getAttribute('customIndex'));
+        console.log('class', 'navAttr');
+
+        // 3.移除属性
+        div.removeAttribute('customIndex');
+
+    </script>
+
+</body>
+
+</html>
