@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点操作</title>
+</head>
+
+<body>
+
+    <!-- 栗子1：parentNode -->
+    <!-- <div class="father-box">
+        <span class="sun-box">
+            <div class="grandson-box">
+
+            </div>
+        </span>
+    </div> -->
+
+    <!-- 栗子2：parentNode -->
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+
+
+    <script>
+        //  <!-- 栗子1：parentNode -->
+        // var grandson_box = document.querySelector('.grandson-box');
+        // 得到的是离元素最近的父级节点(亲爸爸)，如果找不到父节点，就返回为空
+        // console.log(grandson_box.parentNode);
+        // var sun_box = document.querySelector('.sun-box');
+        // console.log(sun_box.parentNode);
+        // var father_box = document.querySelector('.father-box');
+
+
+        // <!-- 栗子2：parentNode -->
+        var ul = document.querySelector('ul');
+        // var lis = ul.querySelectorAll('li');
+        console.log(ul.childNodes);
+        for (var i = 0; i < ul.childNodes.length; i++) {
+            if (ul.childNodes[i].nodeType == 1) {
+                // ul.childNodes[i]是元素节点
+                console.log(ul.childNodes[i]);
+            }
+        }
+        // 实际开发中常用children
+        console.log(ul.children);
+        // 返回第一个子元素节点
+        console.log(ul.firstElementChild);
+        //  返回最后一个子元素节点
+        console.log(ul.lastElementChild);
+        //  实际开发中返回第一个、最后一个元素节点
+        console.log(ul.children[0]);
+        console.log(ul.children[4]);
+
+    </script>
+
+</body>
+
+</html>
