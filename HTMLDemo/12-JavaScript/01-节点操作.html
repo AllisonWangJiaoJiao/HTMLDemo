@@ -19,7 +19,7 @@
         </span>
     </div> -->
 
-    <!-- 栗子2：parentNode -->
+    <!-- 栗子2：childNodes -->
     <ul>
         <li>我是li</li>
         <li>我是li</li>
@@ -39,7 +39,7 @@
         // var father_box = document.querySelector('.father-box');
 
 
-        // <!-- 栗子2：parentNode -->
+        // <!-- 栗子2：childNodes -->
         var ul = document.querySelector('ul');
         // var lis = ul.querySelectorAll('li');
         console.log(ul.childNodes);
@@ -51,13 +51,13 @@
         }
         // 实际开发中常用children
         console.log(ul.children);
-        // 返回第一个子元素节点
+        // 返回第一个子元素节点[IE9以上支持]
         console.log(ul.firstElementChild);
-        //  返回最后一个子元素节点
+        // 返回最后一个子元素节点[IE9以上支持]
         console.log(ul.lastElementChild);
-        //  实际开发中返回第一个、最后一个元素节点
+        // 实际开发中返回第一个、最后一个元素节点 
         console.log(ul.children[0]);
-        console.log(ul.children[4]);
+        console.log(ul.children[ul.children.length - 1]);
 
     </script>
 
