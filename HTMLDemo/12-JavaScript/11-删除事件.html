@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除事件</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <script>
+
+        var divs = document.querySelectorAll('div');
+        divs[0].onclick = function () {
+            alert('111');
+            // 1.解绑事件
+            divs[0].onclick = null;
+        }
+
+        // function () 是匿名函数
+        // divs[1].addEventListener('click', function () {
+        //     alert('222');
+        //     divs[1].removeEventListener('click',xxx);
+        // })
+        divs[1].addEventListener('click', clickFn);//里面的clickFn不需要加小括号
+        function clickFn() {
+            alert('222');
+        }
+        // 2.解绑事件
+        divs[1].removeEventListener('click', clickFn);
+
+        // // 3.解绑事件 IE9以前的版本支持
+        // divs[2].attachEvent('onclick', clickFn2);
+        // function clickFn2() {
+        //     alert('333');
+        //     divs[2].detachEvent('onclick', clickFn2);
+        // }
+
+        // 4.删除时间兼容性解决方案
+        function removeEventListener(element, eventName, fn) {
+            // 判断浏览器是否支持 removeEventListener 方法
+            if (element.removeEventListener) {
+                element.removeEventListener(eventName, fn);
+            } else if (element.detachEvent) {
+                element.detachEvent('on' + eventName, fn);
+            } else {
+                element['on' + eventName] = null;
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
