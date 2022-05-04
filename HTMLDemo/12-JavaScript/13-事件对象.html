@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件对象</title>
+    <style>
+        div {
+            background-color: pink;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>123</div>
+    <script>
+        // 事件对象
+        var div = document.querySelector('div');
+        // div.onclick = function (event) {
+        //     console.log(event);
+        // }
+        div.addEventListener('click', function (event) {
+            console.log(event);
+            // IE678写法
+            // console.log(window.event);
+        })
+        // 1.event 是一个事件对象，写到监听器函数,小括号里面，当形参来看
+        // 2.事件对象只有有了事件才会存在，它是系统给我们自动创建的，不需要我们传递参数
+        // 3.事件对象是事件的一系列相关数据的集合，跟事件相关的；
+        // 比如1：鼠标点击里面就包含了鼠标的相关信息，鼠标坐标；
+        // 比如2：键盘事件里面包含了键盘事件的信息，如：判断用户按下那个键
+        // 4.这个时间对象可以自己命名，比如event，evt, e
+        // 5.事件对象也有兼容性问题 IE678 通过window.event，兼容写法 event = event || window.event;
+
+    </script>
+
+</body>
+
+</html>

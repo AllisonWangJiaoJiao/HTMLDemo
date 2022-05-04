@@ -39,6 +39,8 @@
         // 1.JS代码中只能执行捕获或者冒泡其中的一个阶段
         // 2.onclick 和 attachEvent 只能得到冒泡阶段
         // 3.捕获阶段，如果addEventListener第三个参数是true,则处于捕获阶段 document->html->body->father->son
+
+        // // 捕获阶段 true
         // var son = document.querySelector('.son');
         // son.addEventListener('click', function () {
         //     alert('son');
@@ -48,15 +50,21 @@
         //     alert('father');
         // }, true);
 
-        // 4.冒泡阶段 
-        var son = document.querySelector('.son');
-        son.addEventListener('click', function () {
+        // 冒泡阶段  false
+        var son2 = document.querySelector('.son');
+        son2.addEventListener('click', function () {
             alert('son');
         }, false);
-        var father = document.querySelector('.father');
-        father.addEventListener('click', function () {
+        var father2 = document.querySelector('.father');
+        father2.addEventListener('click', function () {
             alert('father');
         }, false);
+        document.addEventListener('click', function () {
+            alert('document');
+        })
+
+        // 总结：4.实际开发中，我们很少使用事件捕获，我们更关注事件冒泡；
+        // 5.有些事件是没有冒泡的，比如onblue, onfocus, onmouseenter, onmouseleave
 
     </script>
 </body>
