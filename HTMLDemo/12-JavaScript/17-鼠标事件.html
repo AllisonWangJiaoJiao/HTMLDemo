@@ -12,13 +12,23 @@
     我是一段不愿意分享的文字
 
     <script>
-        //1.contextmenu 禁止鼠标右键菜单
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        })
-        //2.selectstart 禁止选中
-        document.addEventListener('selectstart', function (e) {
-            e.preventDefault();
+        // //1.contextmenu 禁止鼠标右键菜单
+        // document.addEventListener('contextmenu', function (e) {
+        //     e.preventDefault();
+        // })
+        // //2.selectstart 禁止选中
+        // document.addEventListener('selectstart', function (e) {
+        //     e.preventDefault();
+        // })
+        //3.鼠标事件对象 
+        document.addEventListener('click', function (e) {
+            // 3.1 clicent 鼠标可视区的x和y坐标
+            console.log(e.clientX);
+            console.log(e.clientY);
+            // 3.2 page 鼠标在页面文档的x和y坐标
+            console.log(e.pageX);
+            console.log(e.pageY);
+
         })
 
     </script>
