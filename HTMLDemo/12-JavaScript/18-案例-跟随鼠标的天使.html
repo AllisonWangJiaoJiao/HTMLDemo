@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+            top: 2px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/spirit.jpeg" alt="">
+
+    <script>
+        //获取图片
+        var pic = document.querySelector('img');
+        document.addEventListener('mousemove', function (e) {
+            console.log(e);
+            //核心原理：每次鼠标移动，我们都会获得最新的鼠标坐标，把这个x和y坐标作为图片的top和left值就可以移动图片
+            var x = e.pageX;
+            var y = e.pageY;
+            console.log('x坐标是' + x, 'y坐标是' + y);
+            //📢 千万不要忘记letf和top添加px单位
+            pic.style.left = x - 50 + 'px';
+            pic.style.top = y - 50 + 'px';
+
+
+        })
+    </script>
+
+</body>
+
+</html>
