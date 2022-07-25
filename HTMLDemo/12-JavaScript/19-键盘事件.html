@@ -11,23 +11,44 @@
 <body>
 
     <script>
-        // 常用键盘事件
-        // 1.keyup 按键弹起的时候触发
-        // document.onkeyup = function () {
+        // // 常用键盘事件
+        // // 1.keyup 按键弹起的时候触发
+        // // document.onkeyup = function () {
+        // //     console.log('我弹起来了');
+        // // }
+        // document.addEventListener('keyup', function () {
         //     console.log('我弹起来了');
-        // }
-        document.addEventListener('keyup', function () {
-            console.log('我弹起来了');
+        // })
+        // // 2. keydown按键按下的时候触发，能识别gonna键，ctr,shift，箭头
+        // document.addEventListener('keydown', function () {
+        //     console.log('我按下了keydown');
+        // })
+        // // 3.keypress 按键按下的时候歘(不能识别功能键，比如ctr,shifit,箭头)
+        // document.addEventListener('keypress', function () {
+        //     console.log('我按下了keypress');
+        // })
+        // //4.三个事件的执行顺序：keydown--> keypress--> keyup
+
+
+        // 📢 键盘事件对象中的keyCode属性可以得到相应键的ASCII码值
+        document.addEventListener('keyup', function (e) {
+            //console.log(e);
+            //console.log(e.keyCode, e.key);
         })
-        // 2. keydown按键按下的时候触发，能识别gonna键，ctr,shift，箭头
-        document.addEventListener('keydown', function () {
-            console.log('我按下了keydown');
+
+        document.addEventListener('keypress', function (e) {
+            //1.keyup和keydown不区分字母大小写，a和A得到的都是65
+            //2.keypress区分字母大小写，a=97,A=65
+            console.log('press:' + e.keyCode);
+            if (e.keyCode == 65) {
+                alert('a');
+            } else {
+                alert('!a');
+            }
         })
-        // 3.keypress 按键按下的时候歘(不能识别功能键，比如ctr,shifit,箭头)
-        document.addEventListener('keypress', function () {
-            console.log('我按下了keypress');
-        })
-        //4.三个事件的执行顺序：keydown--> keypress--> keyup
+
+
+
     </script>
 
 </body>
