@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5s后自动关闭广告</title>
+</head>
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+    <div class="ad">广告</div>
+    <script>
+        var ad = document.querySelector('.ad');
+        var timer = setTimeout(function () {
+            ad.style.display = 'none';
+            window.clearTimeout(timer);
+            console.log('定时器清除');
+        }, 5000)
+
+
+    </script>
+</body>
+
+</html>
