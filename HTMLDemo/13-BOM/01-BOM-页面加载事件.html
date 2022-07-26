@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM-页面加载事件</title>
+</head>
+
+<body>
+
+    <!-- 📢  之前写法 -->
+    <!-- <button>点击</button>
+    <script>
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            alert('点击我');
+        })
+        window.onload = function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                alert('点击我');
+            })
+        }
+    </script> -->
+
+
+    <!-- <script>
+        //窗口加载事件
+        window.onload = function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                alert('点击我');
+            })
+        }
+    </script>
+    <button>新点击</button> -->
+
+
+    <button>提倡写法</button>
+    <script>
+        window.addEventListener('load', function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                alert('提倡写法');
+            })
+        })
+
+        window.addEventListener('load', function () {
+            alert('22');
+        })
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            alert('33');
+        })
+        // load等页面内容全部加载完毕，包含页面dom元素 图片 flash css等
+        // DOMContentLoaded 是DMO加载完毕，不包含图片 flash css等，加载速度比load快
+    </script>
+
+
+
+</body>
+
+</html>
