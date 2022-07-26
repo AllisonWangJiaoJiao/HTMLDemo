@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两种定时器</title>
+</head>
+
+<body>
+
+    <script>
+        // setTimeout()
+        // 1.window调用的时候可以省略
+        // 2.演示时间单位是毫秒，可以省略，如果省略默认立即执行
+        // 3.可以直接写函数，也可以写函数名
+        // 4.页面中有多个定时器，可以给定时器加标识(名字)
+        window.setTimeout(function () {
+            console.log('时间到了');
+        }, 2000)
+
+        function callback() {
+            console.log('爆炸了💥');
+        }
+        // setTimeout(callback, 3000);
+        // setTimeout('callback()', 3000);//不提倡写法
+
+        var timer1 = setTimeout(callback, 3000);
+        var timer2 = setTimeout(callback, 5000);
+
+    </script>
+
+</body>
+
+</html>
